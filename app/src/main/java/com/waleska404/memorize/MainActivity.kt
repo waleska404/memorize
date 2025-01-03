@@ -19,7 +19,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MemorizeTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    bottomBar = { BottomNavigation() }
+                ) { innerPadding ->
                     Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
